@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planifica tu Día</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- CABECERA CON TÍTULO Y NAVEGACIÓN -->
+    <header>
+        <div class="header-content">
+            <h1>Planifica tu Día</h1>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Rutinas</a>
+                <a href="#">Agregar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE INTRODUCCIÓN CON TEXTO + IMAGEN -->
+    <section class="intro">
+        <div class="intro-texto">
+            <h2>Organiza tu tiempo</h2>
+            <p>
+                Una herramienta local para ayudarte a planear tu rutina diaria <strong>sin conexión a internet</strong>.
+                Simple, rápida y con estilo moderno.
+            </p>
+        </div>
+        <div class="intro-imagen">
+            <img src="calendario.jpg" alt="Imagen de planificación" />
+        </div>
+    </section>
+
+    <!-- PANEL PRINCIPAL -->
+    <main class="container">
+        <!-- FORMULARIO PARA AGREGAR RUTINAS -->
+        <section>
+            <h3>Agregar una rutina</h3>
+            <input type="text" id="nombreRutina" placeholder="Ej. Estudiar JavaScript" />
+            <button onclick="agregarRutina()">Agregar</button>
+        </section>
+
+        <!-- LISTADO DE RUTINAS -->
+        <section>
+            <h3>Mis rutinas</h3>
+            <div id="panelRutinas" class="event-list">
+                <!-- Aquí aparecerán las rutinas -->
+            </div>
+        </section>
+    </main>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
