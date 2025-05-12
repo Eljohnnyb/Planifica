@@ -1,3 +1,5 @@
+@@ -1,29 +1,30 @@
+<!DOCTYPE html>
 <!DOCTYPE html> 
 <html lang="es">
 <head>
@@ -12,8 +14,12 @@
     <!-- CABECERA CON TÍTULO Y NAVEGACIÓN -->
     <header>
         <div class="header-content">
+            <h1>Planifica tu Día</h1>
             <h1><i class="fa-solid fa-calendar-check"></i> Planifica tu Día</h1>
             <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Rutinas</a>
+                <a href="#">Agregar</a>
                 <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
                 <a href="#"><i class="fa-solid fa-list-check"></i> Rutinas</a>
                 <a href="#"><i class="fa-solid fa-plus"></i> Agregar</a>
@@ -24,27 +30,27 @@
     <!-- SECCIÓN DE INTRODUCCIÓN CON TEXTO + IMAGEN -->
     <section class="intro">
         <div class="intro-texto">
+            <h2>Organiza tu tiempo</h2>
             <h2><i class="fa-solid fa-clock"></i> Organiza tu tiempo</h2>
             <p>
                 Una herramienta local para ayudarte a planear tu rutina diaria <strong>sin conexión a internet</strong>.
                 Simple, rápida y con estilo moderno.
-            </p>
-        </div>
-        <div class="intro-imagen">
-            <img src="calendario.jpg" alt="Imagen de planificación" />
-        </div>
-    </section>
-
+@@ -37,22 +38,32 @@ <h2>Organiza tu tiempo</h2>
     <!-- PANEL PRINCIPAL -->
     <main class="container">
         <!-- FORMULARIO PARA AGREGAR RUTINAS -->
+        <section>
+            <h3>Agregar una rutina</h3>
         <section class="formulario">
             <h3><i class="fa-solid fa-pen"></i> Agregar una rutina</h3>
             <input type="text" id="nombreRutina" placeholder="Ej. Estudiar JavaScript" />
+            <button onclick="agregarRutina()">Agregar</button>
             <button onclick="agregarRutina()"><i class="fa-solid fa-plus"></i> Agregar</button>
         </section>
 
         <!-- LISTADO DE RUTINAS -->
+        <section>
+            <h3>Mis rutinas</h3>
         <section class="rutinas">
             <h3><i class="fa-solid fa-list"></i> Mis rutinas</h3>
             <div id="panelRutinas" class="event-list">
@@ -66,4 +72,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
