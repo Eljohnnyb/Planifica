@@ -1,21 +1,22 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planifica tu Día</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <!-- CABECERA CON TÍTULO Y NAVEGACIÓN -->
     <header>
         <div class="header-content">
-            <h1>Planifica tu Día</h1>
+            <h1><i class="fa-solid fa-calendar-check"></i> Planifica tu Día</h1>
             <nav>
-                <a href="#">Inicio</a>
-                <a href="#">Rutinas</a>
-                <a href="#">Agregar</a>
+                <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#"><i class="fa-solid fa-list-check"></i> Rutinas</a>
+                <a href="#"><i class="fa-solid fa-plus"></i> Agregar</a>
             </nav>
         </div>
     </header>
@@ -23,7 +24,7 @@
     <!-- SECCIÓN DE INTRODUCCIÓN CON TEXTO + IMAGEN -->
     <section class="intro">
         <div class="intro-texto">
-            <h2>Organiza tu tiempo</h2>
+            <h2><i class="fa-solid fa-clock"></i> Organiza tu tiempo</h2>
             <p>
                 Una herramienta local para ayudarte a planear tu rutina diaria <strong>sin conexión a internet</strong>.
                 Simple, rápida y con estilo moderno.
@@ -37,22 +38,32 @@
     <!-- PANEL PRINCIPAL -->
     <main class="container">
         <!-- FORMULARIO PARA AGREGAR RUTINAS -->
-        <section>
-            <h3>Agregar una rutina</h3>
+        <section class="formulario">
+            <h3><i class="fa-solid fa-pen"></i> Agregar una rutina</h3>
             <input type="text" id="nombreRutina" placeholder="Ej. Estudiar JavaScript" />
-            <button onclick="agregarRutina()">Agregar</button>
+            <button onclick="agregarRutina()"><i class="fa-solid fa-plus"></i> Agregar</button>
         </section>
 
         <!-- LISTADO DE RUTINAS -->
-        <section>
-            <h3>Mis rutinas</h3>
+        <section class="rutinas">
+            <h3><i class="fa-solid fa-list"></i> Mis rutinas</h3>
             <div id="panelRutinas" class="event-list">
                 <!-- Aquí aparecerán las rutinas -->
             </div>
         </section>
     </main>
 
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 Planifica tu Día | Desarrollado por John Kevin</p>
+        <div class="footer-icons">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-language"></i>
+        </div>
+    </footer>
+
     <!-- SCRIPT -->
     <script src="script.js"></script>
 </body>
 </html>
+
