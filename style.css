@@ -1,102 +1,179 @@
-body {
-    font-family: Arial, sans-serif;
+/* FUENTES Y RESETEO */
+* {
     margin: 0;
     padding: 0;
-    background: #f5f5f5;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0f2f5;
     color: #333;
 }
 
+/* CABECERA */
 header {
-    background-color: #4CAF50;
+    background-color: #4a90e2;
+    padding: 1rem 2rem;
     color: white;
-    padding: 1em;
-    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.header-content nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.header-content nav a:hover {
-    text-decoration: underline;
-}
-
-.intro {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.intro-texto {
-    max-width: 400px;
-    padding: 20px;
-}
-
-.intro-imagen img {
-    max-width: 300px;
-    margin: 10px;
-    border-radius: 8px;
-}
-
-.container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-input[type="text"] {
-    padding: 10px;
-    width: 70%;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.event-list {
-    margin-top: 20px;
-}
-
-.event-item {
-    background-color: #e8f5e9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-left: 5px solid #4CAF50;
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
+    flex-wrap: wrap;
 }
 
-.eliminar-btn {
-    background-color: #f44336;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+header h1 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    margin: 0 0.8rem;
+    text-decoration: none;
     color: white;
-    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.eliminar-btn:hover {
-    background-color: #d32f2f;
+nav a:hover {
+    color: #ffdd57;
+}
+
+/* INTRODUCCIÓN */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    background: #ffffff;
+    margin: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.intro-texto {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.intro-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-imagen img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* CONTENIDO PRINCIPAL */
+.container {
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* FORMULARIO */
+.formulario input {
+    width: 70%;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.formulario button {
+    padding: 0.7rem 1rem;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #357abd;
+}
+
+/* RUTINAS */
+.rutinas h3 {
+    margin-bottom: 1rem;
+}
+
+.event-list {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    min-height: 100px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.footer-icons {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-icons i {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.footer-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* ANIMACIONES */
+section, .header-content, footer {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .formulario input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .formulario button {
+        width: 100%;
+    }
 }
